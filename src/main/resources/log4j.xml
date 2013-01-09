@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" >
+
+  <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+     <param name="Target" value="System.out" /> 
+     <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[%d{HH:mm:ss}][%-5p][%-30.30c] %m%n" />
+     </layout>
+  </appender>
+
+<!--
+  <logger name="jndi">
+    <level value="warn" />
+    <appender-ref ref="stdout" />
+  </logger>
+  <logger name="org.jboss">
+    <level value="warn" />
+    <appender-ref ref="stdout" />
+  </logger>
+  <logger name="org.hibernate">
+    <level value="warn" />
+    <appender-ref ref="stdout" />
+  </logger>
+-->
+
+  <logger name="org.hibernate.type">
+    <level value="trace" />
+  </logger>
+  <logger name="org.hibernate.SQL">
+    <level value="trace" />
+  </logger>
+  <logger name="org.apache.wicket">
+    <level value="warn" />
+  </logger>
+  <logger name="org.eclipse.jetty">
+    <level value="warn" />
+  </logger>
+  <logger name="com.sun.jersey">
+    <level value="warn" />
+  </logger>
+
+  <logger name="SampleWebStarter">
+    <level value="trace" />
+  </logger>
+
+  <logger name="jabara.servlet">
+    <level value="trace" />
+  </logger>
+
+  <root>
+    <level value="debug" />
+    <appender-ref ref="stdout" />
+  </root>
+
+</log4j:configuration>
