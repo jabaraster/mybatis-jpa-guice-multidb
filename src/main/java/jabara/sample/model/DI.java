@@ -4,17 +4,23 @@
 package jabara.sample.model;
 
 import jabara.general.ArgUtil;
-import jabara.general.IProducer;
+import jabara.general.ExceptionUtil;
 import jabara.jpa.PersistenceXmlPropertyNames;
-import jabara.jpa_guice.util.MultiPersistenceUnitJpaModule;
+import jabara.jpa_guice.MultiPersistenceUnitJpaModule;
 import jabara.sample.service.impl.IEmployeeMapper;
 import jabara.sample.service.impl.MainDao;
 import jabara.sample.service.impl.MainTransactional;
 import jabara.sample.service.impl.SubDao;
 import jabara.sample.service.impl.SubTransactional;
 
+import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 import org.mybatis.guice.MyBatisModule;
@@ -23,6 +29,7 @@ import org.postgresql.Driver;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.google.inject.Provider;
 import com.google.inject.name.Names;
 
 /**
@@ -36,6 +43,7 @@ public class DI {
     private static Injector                  _injector                 = createInjector();
 
     /**
+     * @param <T>
      * @param pType -
      * @return -
      */
@@ -44,22 +52,21 @@ public class DI {
         return _injector.getInstance(pType);
     }
 
-    @SuppressWarnings({ "synthetic-access", "nls" })
+    @SuppressWarnings({ "nls" })
     private static Injector createInjector() {
+        final MultiPersistenceUnitJpaModule mainJpaModule = new MultiPersistenceUnitJpaModule( //
+                "mainPersistenceUnit" //
+                , MainDao.class //
+                , MainTransactional.class);
+        final MultiPersistenceUnitJpaModule subJpaModule = new MultiPersistenceUnitJpaModule( //
+                "subPersistenceUnit" //
+                , SubDao.class //
+                , SubTransactional.class);
         return Guice.createInjector( //
-                new MultiPersistenceUnitJpaModule("mainPersistenceUnit", new IProducer<Map<String, String>>() {
-                    @Override
-                    public Map<String, String> produce() {
-                        return _mainConnectionProperties;
-                    }
-                }, MainDao.class, MainTransactional.class) //
-                , new MultiPersistenceUnitJpaModule("subPersistenceUnit", new IProducer<Map<String, String>>() {
-                    @Override
-                    public Map<String, String> produce() {
-                        return _subConnectionProperties;
-                    }
-                }, SubDao.class, SubTransactional.class) // //$NON-NLS-1$
-                , new ExMyBatisModule() //
+                mainJpaModule //
+                , subJpaModule //
+                , new DataSourceMyBatisModule("jdbc/mainDataSource") //
+                , new DataSourceMyBatisModule("jdbc/subDataSource") //
                 );
     }
 
@@ -99,6 +106,48 @@ public class DI {
     private static void putMyBatisProperty(final Map<String, String> pMap) {
         pMap.put("mybatis.environment.id", "test"); //$NON-NLS-1$ //$NON-NLS-2$
         pMap.put("JDBC.autoCommit", Boolean.toString(false)); //$NON-NLS-1$
+    }
+
+    private static class DataSourceMyBatisModule extends MyBatisModule {
+
+        private final String   dataSourceJndiName;
+        private List<Class<?>> mapperClasses;
+
+        DataSourceMyBatisModule(final String pDataSourceJndiName, final Class<?>... pMapperClasses) {
+            this.dataSourceJndiName = pDataSourceJndiName;
+        }
+
+        @SuppressWarnings("synthetic-access")
+        @Override
+        protected void initialize() {
+            final DataSource ds = lookupDataSource();
+
+            try {
+                System.out.println(ds.getConnection());
+                System.out.println(ds.getConnection());
+            } catch (final SQLException e) {
+                jabara.Debug.write(e);
+            }
+
+            bindDataSourceProvider(new Provider<DataSource>() {
+                @Override
+                public DataSource get() {
+                    return ds;
+                }
+            });
+            bindTransactionFactoryType(JdbcTransactionFactory.class);
+            addMapperClass(IEmployeeMapper.class);
+
+            Names.bindProperties(binder(), _mainConnectionProperties);
+        }
+
+        private DataSource lookupDataSource() {
+            try {
+                return InitialContext.doLookup(this.dataSourceJndiName);
+            } catch (final NamingException e) {
+                throw ExceptionUtil.rethrow(e);
+            }
+        }
     }
 
     private static class ExMyBatisModule extends MyBatisModule {

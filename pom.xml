@@ -12,6 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jetty.version>8.1.5.v20120716</jetty.version>
 	</properties>
 
 	<dependencies>
@@ -52,8 +53,45 @@
 		<!-- JPA用ユーティリティ -->
 		<dependency>
 			<groupId>jabaraster</groupId>
+			<artifactId>jabara-jpa</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>jabaraster</groupId>
 			<artifactId>jabara-jpa-guice</artifactId>
 			<version>1.2</version>
+		</dependency>
+
+		<!-- 組み込みJettyの実行に必要 -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>${jetty.version}</version>
+		</dependency>
+
+		<!-- 組み込みJettyでJSPを実行するために必要 -->
+		<dependency>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>jsp-2.1-glassfish</artifactId>
+			<version>9.1.02.B04.p0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>servlet-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- 組み込みJettyにServletAPI3.0のアノテーションを解釈させるために必要 -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-annotations</artifactId>
+			<version>${jetty.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm-commons</artifactId>
+			<version>3.3.1</version>
 		</dependency>
 
 		<!-- ログ -->
@@ -66,6 +104,13 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.6.2</version>
+		</dependency>
+
+		<!-- ユーティリティ -->
+		<dependency>
+			<groupId>jabaraster</groupId>
+			<artifactId>jabara-general</artifactId>
+			<version>1.1</version>
 		</dependency>
 
 		<!-- テスト用 -->

@@ -3,7 +3,7 @@
  */
 package jabara.sample.service.impl;
 
-import jabara.jpa.util.DaoBase;
+import jabara.jpa.JpaDaoBase;
 import jabara.sample.entity.EEmployee;
 import jabara.sample.entity.EKeyword;
 import jabara.sample.service.ISomeService;
@@ -18,29 +18,24 @@ import javax.persistence.criteria.CriteriaQuery;
  */
 public class SomeServiceImpl implements ISomeService {
 
-    @Inject
-    @MainDao
-    private DaoBase         mainDao;
-    @Inject
-    @SubDao
-    private DaoBase         subDao;
-    @Inject
-    private IEmployeeMapper employeeMapper;
+    private final JpaDaoBase      mainDao;
+    private final JpaDaoBase      subDao;
+    private final IEmployeeMapper employeeMapper;
 
-    // /**
-    // * @param pMainDao -
-    // * @param pSubDao -
-    // * @param pEmployeeMapper -
-    // */
-    // @Inject
-    // public SomeServiceImpl( //
-    // @MainDao final DaoBase pMainDao //
-    // , @SubDao final DaoBase pSubDao //
-    // , final IEmployeeMapper pEmployeeMapper) {
-    // this.mainDao = pMainDao;
-    // this.subDao = pSubDao;
-    // this.employeeMapper = pEmployeeMapper;
-    // }
+    /**
+     * @param pMainDao -
+     * @param pSubDao -
+     * @param pEmployeeMapper -
+     */
+    @Inject
+    public SomeServiceImpl( //
+            @MainDao final JpaDaoBase pMainDao //
+            , @SubDao final JpaDaoBase pSubDao //
+            , final IEmployeeMapper pEmployeeMapper) {
+        this.mainDao = pMainDao;
+        this.subDao = pSubDao;
+        this.employeeMapper = pEmployeeMapper;
+    }
 
     /**
      * @see jabara.sample.service.ISomeService#run()

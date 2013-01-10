@@ -1,5 +1,4 @@
 <classpath>
-  <classpathentry kind="src" path="src/test/java" output="target/test-classes"/>
   <classpathentry kind="src" path="src/main/java"/>
   <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
   <classpathentry kind="output" path="target/classes"/>
@@ -8,8 +7,13 @@
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/javax/inject/javax.inject/1/javax.inject-1-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/ant/ant/1.6.5/ant-1.6.5.jar" sourcepath="M2_REPO/ant/ant/1.6.5/ant-1.6.5-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
   <classpathentry kind="var" path="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar" sourcepath="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/asm/asm/3.3.1/asm-3.3.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/asm/asm-commons/3.3.1/asm-commons-3.3.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/asm/asm-tree/3.3.1/asm-tree-3.3.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jdt/core/3.1.1/core-3.1.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar" sourcepath="M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/google/inject/guice/3.0/guice-3.0.jar" sourcepath="M2_REPO/com/google/inject/guice/3.0/guice-3.0-sources.jar">
     <attributes>
@@ -51,8 +55,103 @@
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.activation/1.1.0.v201105071233/javax.activation-1.1.0.v201105071233.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/javax.activation/1.1.0.v201105071233/javax.activation-1.1.0.v201105071233-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/orbit/javax.activation/1.1.0.v201105071233/javax.activation-1.1.0.v201105071233-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.annotation/1.1.0.v201108011116/javax.annotation-1.1.0.v201108011116.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/javax.annotation/1.1.0.v201108011116/javax.annotation-1.1.0.v201108011116-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/orbit/javax.annotation/1.1.0.v201108011116/javax.annotation-1.1.0.v201108011116-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.mail.glassfish/1.4.1.v201005082020/javax.mail.glassfish-1.4.1.v201005082020.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/javax.mail.glassfish/1.4.1.v201005082020/javax.mail.glassfish-1.4.1.v201005082020-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/orbit/javax.mail.glassfish/1.4.1.v201005082020/javax.mail.glassfish-1.4.1.v201005082020-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.transaction/1.1.1.v201105210645/javax.transaction-1.1.1.v201105210645.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/javax.transaction/1.1.1.v201105210645/javax.transaction-1.1.1.v201105210645-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/orbit/javax.transaction/1.1.1.v201105210645/javax.transaction-1.1.1.v201105210645-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
   <classpathentry kind="var" path="M2_REPO/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar" sourcepath="M2_REPO/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final.jar" sourcepath="M2_REPO/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-annotations/8.1.5.v20120716/jetty-annotations-8.1.5.v20120716.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-annotations/8.1.5.v20120716/jetty-annotations-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-continuation/8.1.5.v20120716/jetty-continuation-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-continuation/8.1.5.v20120716/jetty-continuation-8.1.5.v20120716-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-continuation/8.1.5.v20120716/jetty-continuation-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-http/8.1.5.v20120716/jetty-http-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-http/8.1.5.v20120716/jetty-http-8.1.5.v20120716-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-http/8.1.5.v20120716/jetty-http-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-io/8.1.5.v20120716/jetty-io-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-io/8.1.5.v20120716/jetty-io-8.1.5.v20120716-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-io/8.1.5.v20120716/jetty-io-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-jndi/8.1.5.v20120716/jetty-jndi-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-jndi/8.1.5.v20120716/jetty-jndi-8.1.5.v20120716-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-jndi/8.1.5.v20120716/jetty-jndi-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-plus/8.1.5.v20120716/jetty-plus-8.1.5.v20120716.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-plus/8.1.5.v20120716/jetty-plus-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-security/8.1.5.v20120716/jetty-security-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-security/8.1.5.v20120716/jetty-security-8.1.5.v20120716-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-security/8.1.5.v20120716/jetty-security-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-server/8.1.5.v20120716/jetty-server-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-server/8.1.5.v20120716/jetty-server-8.1.5.v20120716-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-server/8.1.5.v20120716/jetty-server-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-servlet/8.1.5.v20120716/jetty-servlet-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-servlet/8.1.5.v20120716/jetty-servlet-8.1.5.v20120716-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-servlet/8.1.5.v20120716/jetty-servlet-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-util/8.1.5.v20120716/jetty-util-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-util/8.1.5.v20120716/jetty-util-8.1.5.v20120716-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-util/8.1.5.v20120716/jetty-util-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-webapp/8.1.5.v20120716/jetty-webapp-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-webapp/8.1.5.v20120716/jetty-webapp-8.1.5.v20120716-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-webapp/8.1.5.v20120716/jetty-webapp-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-xml/8.1.5.v20120716/jetty-xml-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-xml/8.1.5.v20120716/jetty-xml-8.1.5.v20120716-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-xml/8.1.5.v20120716/jetty-xml-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/mortbay/jetty/jsp-2.1-glassfish/9.1.02.B04.p0/jsp-2.1-glassfish-9.1.02.B04.p0.jar" sourcepath="M2_REPO/org/mortbay/jetty/jsp-2.1-glassfish/9.1.02.B04.p0/jsp-2.1-glassfish-9.1.02.B04.p0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/mortbay/jetty/jsp-2.1-glassfish/9.1.02.B04.p0/jsp-2.1-glassfish-9.1.02.B04.p0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/mortbay/jetty/jsp-api-2.1-glassfish/9.1.02.B04.p0/jsp-api-2.1-glassfish-9.1.02.B04.p0.jar" sourcepath="M2_REPO/org/mortbay/jetty/jsp-api-2.1-glassfish/9.1.02.B04.p0/jsp-api-2.1-glassfish-9.1.02.B04.p0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/mortbay/jetty/jsp-api-2.1-glassfish/9.1.02.B04.p0/jsp-api-2.1-glassfish-9.1.02.B04.p0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
   <classpathentry kind="var" path="M2_REPO/junit/junit/4.10/junit-4.10.jar" sourcepath="M2_REPO/junit/junit/4.10/junit-4.10-sources.jar">
     <attributes>
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/junit/junit/4.10/junit-4.10-javadoc.jar!/" name="javadoc_location"/>
@@ -73,6 +172,11 @@
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/mybatis/mybatis-guice/3.3/mybatis-guice-3.3-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/org.objectweb.asm/3.1.0.v200803061910/org.objectweb.asm-3.1.0.v200803061910.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/org.objectweb.asm/3.1.0.v200803061910/org.objectweb.asm-3.1.0.v200803061910-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/orbit/org.objectweb.asm/3.1.0.v200803061910/org.objectweb.asm-3.1.0.v200803061910-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
   <classpathentry kind="var" path="M2_REPO/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar" sourcepath="M2_REPO/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4-sources.jar">
     <attributes>
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4-javadoc.jar!/" name="javadoc_location"/>
@@ -88,5 +192,5 @@
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/slf4j/slf4j-log4j12/1.6.2/slf4j-log4j12-1.6.2-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 </classpath>
