@@ -20,20 +20,24 @@ public class SomeServiceImpl implements ISomeService {
 
     private final JpaDaoBase      mainDao;
     private final JpaDaoBase      subDao;
+    private final IKeywordMapper  keywordMapper;
     private final IEmployeeMapper employeeMapper;
 
     /**
      * @param pMainDao -
      * @param pSubDao -
+     * @param pKeywordMapper -
      * @param pEmployeeMapper -
      */
     @Inject
     public SomeServiceImpl( //
             @MainDao final JpaDaoBase pMainDao //
             , @SubDao final JpaDaoBase pSubDao //
+            , final IKeywordMapper pKeywordMapper //
             , final IEmployeeMapper pEmployeeMapper) {
         this.mainDao = pMainDao;
         this.subDao = pSubDao;
+        this.keywordMapper = pKeywordMapper;
         this.employeeMapper = pEmployeeMapper;
     }
 
@@ -44,9 +48,10 @@ public class SomeServiceImpl implements ISomeService {
     @MainTransactional
     @SubTransactional
     public void run() {
-        queryMain();
-        querySub();
-        queryMyBatis();
+        queryMainJpa();
+        querySubJpa();
+        queryMainMyBatis();
+        querySubMyBatis();
     }
 
     /**
@@ -57,7 +62,7 @@ public class SomeServiceImpl implements ISomeService {
         return super.toString();
     }
 
-    private void queryMain() {
+    private void queryMainJpa() {
         final EntityManager em = this.mainDao.getEntityManager();
         final CriteriaBuilder builder = em.getCriteriaBuilder();
         final CriteriaQuery<EKeyword> query = builder.createQuery(EKeyword.class);
@@ -68,11 +73,11 @@ public class SomeServiceImpl implements ISomeService {
         }
     }
 
-    private void queryMyBatis() {
-        System.out.println(this.employeeMapper.getAll());
+    private void queryMainMyBatis() {
+        System.out.println(this.keywordMapper.findById(0));
     }
 
-    private void querySub() {
+    private void querySubJpa() {
         final EntityManager em = this.subDao.getEntityManager();
         final CriteriaBuilder builder = em.getCriteriaBuilder();
         final CriteriaQuery<EEmployee> query = builder.createQuery(EEmployee.class);
@@ -81,5 +86,9 @@ public class SomeServiceImpl implements ISomeService {
         for (final EEmployee emp : em.createQuery(query).getResultList()) {
             System.out.println(emp);
         }
+    }
+
+    private void querySubMyBatis() {
+        System.out.println(this.employeeMapper.getAll());
     }
 }

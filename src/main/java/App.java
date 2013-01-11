@@ -13,7 +13,7 @@ import org.postgresql.ds.PGPoolingDataSource;
 public class App {
     /**
      * @param pArgs -
-     * @throws NamingException
+     * @throws NamingException -
      */
     @SuppressWarnings("unused")
     public static void main(final String[] pArgs) throws NamingException {
