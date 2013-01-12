@@ -51,6 +51,11 @@
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/jabaraster/jabara-jpa-guice/1.2/jabara-jpa-guice-1.2-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/jabaraster/jabara-mybatis-guice/1.0/jabara-mybatis-guice-1.0.jar" sourcepath="M2_REPO/jabaraster/jabara-mybatis-guice/1.0/jabara-mybatis-guice-1.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/jabaraster/.m2/repository/jabaraster/jabara-mybatis-guice/1.0/jabara-mybatis-guice-1.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
   <classpathentry kind="var" path="M2_REPO/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar" sourcepath="M2_REPO/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA-sources.jar">
     <attributes>
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA-javadoc.jar!/" name="javadoc_location"/>
@@ -83,7 +88,7 @@
   </classpathentry>
   <classpathentry kind="var" path="M2_REPO/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar" sourcepath="M2_REPO/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final.jar" sourcepath="M2_REPO/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-annotations/8.1.5.v20120716/jetty-annotations-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-annotations/8.1.5.v20120716/jetty-annotations-8.1.5.v20120716-sources.jar">
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-annotations/8.1.5.v20120716/jetty-annotations-8.1.5.v20120716.jar">
     <attributes>
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-annotations/8.1.5.v20120716/jetty-annotations-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
@@ -108,7 +113,7 @@
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-jndi/8.1.5.v20120716/jetty-jndi-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-plus/8.1.5.v20120716/jetty-plus-8.1.5.v20120716.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-plus/8.1.5.v20120716/jetty-plus-8.1.5.v20120716-sources.jar">
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-plus/8.1.5.v20120716/jetty-plus-8.1.5.v20120716.jar">
     <attributes>
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/eclipse/jetty/jetty-plus/8.1.5.v20120716/jetty-plus-8.1.5.v20120716-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
@@ -193,5 +198,5 @@
       <attribute value="jar:file:/Users/jabaraster/.m2/repository/org/slf4j/slf4j-log4j12/1.6.2/slf4j-log4j12-1.6.2-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 </classpath>
