@@ -86,7 +86,7 @@ public @interface MainDao {
 
 ### Google Guiceに、適切なオブジェクトを示す方法
 
-```MultiPersistenceUnitJpaModule```を使います。
+識別子となるアノテーションと、どのPersistenceUnitを使うかを紐付ける必要があります。  
 
 サンプルコードを示します。
 
