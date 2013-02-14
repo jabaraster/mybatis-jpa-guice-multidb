@@ -26,6 +26,12 @@
 			<artifactId>mybatis-guice</artifactId>
 			<version>3.3</version>
 		</dependency>
+		<!-- 複数接続先がある場合にMyBatisをうまく使うためのライブラリ -->
+		<dependency>
+			<groupId>jabaraster</groupId>
+			<artifactId>jabara-mybatis-guice</artifactId>
+			<version>1.0</version>
+		</dependency>
 
 		<!-- DBアクセス -->
 		<dependency>

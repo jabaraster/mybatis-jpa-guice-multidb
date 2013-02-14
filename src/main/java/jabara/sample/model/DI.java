@@ -6,6 +6,8 @@ package jabara.sample.model;
 import jabara.general.ArgUtil;
 import jabara.jpa.PersistenceXmlPropertyNames;
 import jabara.jpa_guice.MultiPersistenceUnitJpaModule;
+import jabara.mybatis_guice.DataSourceMyBatisModule;
+import jabara.mybatis_guice.MultiDataSourceMyBatisModule;
 import jabara.sample.service.impl.IEmployeeMapper;
 import jabara.sample.service.impl.IKeywordMapper;
 import jabara.sample.service.impl.MainDao;
@@ -71,7 +73,7 @@ public class DI {
         putDouble(map, PersistenceXmlPropertyNames.JDBC_USER, "JDBC.username", "postgres");
         putDouble(map, PersistenceXmlPropertyNames.JDBC_USER, "JDBC.password", "postgres");
 
-        DataSourceMyBatisModule.putMyBatisProperty(map);
+        DataSourceMyBatisModule.putMyBatisProperty(map, "stage");
 
         return map;
     }
